@@ -1,6 +1,6 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth2').Strategy;
-// const HomeSchema = require("./models/userSchema");
+const HomeSchema = require("./models/userSchema");
 passport.serializeUser(function(user, done) {
     /*
     From the user take just the id (to minimize the cookie size) and just pass the id of the user

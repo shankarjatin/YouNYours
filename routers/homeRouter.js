@@ -1,8 +1,8 @@
 const express = require("express");
 const Router  = express.Router();
 require('dotenv').config();
-// const HomeSchema = require("../models/userSchema");
-// const PaymentSchema = require("../models/payment-data");
+const HomeSchema = require("../models/userSchema");
+
 require("../passport-setup")
 const cookieSession = require('cookie-session')
 const passport =require("passport");
@@ -85,10 +85,8 @@ Router.post("/good",async(req,res)=>{
           const {
               name,
               email,
-              branch,
-              student_no,
-              roll_no,
-              year
+              prio1,
+              prio2
           }=req.body;
           
 
@@ -99,11 +97,9 @@ Router.post("/good",async(req,res)=>{
                             
                             const  userData = new HomeSchema({
                               name,
-                              email,
-                              branch,
-                              student_no,
-                              roll_no,
-                              year
+                              prio1,
+                              prio2,
+                              email
                              })
                              userData.save( err=>{
                               if(err){
@@ -136,7 +132,7 @@ Router.post("/good",async(req,res)=>{
                                                 console.log("Sent: " + info.response);
                                                 })
 
-                                res.render("pages/payment",{name:req.user.displayName,year:year,email:email,year:year,branch:branch,student_no:student_no,roll_no:roll_no}) 
+                                res.render("pages/afterPrio") 
                              
                               
                              }})}
