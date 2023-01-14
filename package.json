@@ -1,0 +1,36 @@
+{
+  "name": "love-achieved",
+  "version": "1.0.0",
+  "description": "Iam champion",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shankarjatin/YouNYours.git"
+  },
+  "author": "jatin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shankarjatin/YouNYours/issues"
+  },
+  "homepage": "https://github.com/shankarjatin/YouNYours#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "cookie-session": "^2.0.0",
+    "dot-env": "^0.0.1",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "ejs-lint": "^2.0.0",
+    "express": "^4.18.2",
+    "mongodb": "^4.13.0",
+    "mongoose": "^6.8.3",
+    "nodemailer": "^6.9.0",
+    "nodemon": "^2.0.20",
+    "passport": "^0.5.3",
+    "passport-google-oauth2": "^0.2.0",
+    "passport-oauth2": "^1.6.1",
+    "razorpay": "^2.8.4"
+  }
+}
